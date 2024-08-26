@@ -21,8 +21,29 @@ function App() {
     });
   }
 
+  function editNote(id,editNote) {
+
+    setNotes(prevNotes => {
+      return prevNotes.map((noteItem, index) => {
+        if (index === id) {
+    
+          return {
+            title: editNote.title,
+            content: editNote.content,
+            date: new Date().toLocaleTimeString()
+          };
+        } else {
+          return noteItem;
+        }
+      });
+    });
+    console.log(notes);
+
+  }
+
   return (
-    <div>
+    <div className="notes-container">
+      <div>
       <Header />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
@@ -34,9 +55,12 @@ function App() {
             content={noteItem.content}
             date = {noteItem.date}
             onDelete={deleteNote}
+            onEdit={editNote}
           />
         );
       })}
+      </div>
+  
       <Footer />
     </div>
   );

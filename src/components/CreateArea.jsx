@@ -16,13 +16,11 @@ function CreateArea(props) {
     const { name, value } = event.target;
     const d = new Date();
 
-
-
     setNote((prevNote) => {
       return {
         ...prevNote,
         [name]: value,
-        date: d.toLocaleString(),
+        date: d.toLocaleTimeString(),
       };
     });
   }

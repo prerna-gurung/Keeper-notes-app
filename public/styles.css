@@ -5,13 +5,21 @@
 }
 html {
   font-family: "Montserrat", sans-serif;
+  height: 100%;
 }
 body {
   background: #eee;
-  background-image: url("https://www.transparenttextures.com/patterns/dimension.png"); 
-
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  overflow-y: auto; 
 }
 
+.notes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+
+}
 header {
   background-color: #f5ba13;
   padding: 16px 30px;
@@ -25,7 +33,6 @@ header h1 {
 }
 
 footer {
-  position: absolute;
   text-align: center;
   bottom: 0;
   width: 100%;
@@ -44,17 +51,7 @@ footer p {
   margin: 16px;
   float: left;
 }
-.note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-  
-}
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
+
 .note p.date{
   font-size: 0.8em;
   font-family: monospace;
@@ -62,6 +59,34 @@ footer p {
   display: inline-block;
 
 }
+
+.note textarea,
+.note input {
+  outline: none;
+  border: transparent;
+  width: 100%;
+  resize: none; 
+  overflow: hidden; 
+  font-family: inherit; 
+  height: auto;
+}
+
+.note input.title {
+  font-size: 1.5em;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.note textarea.content {
+  font-size: 1.1em;
+  margin-bottom: 4px;
+  font-weight: 100; 
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  min-height: 50px; 
+}
+
 .note button {
   position: relative;
   float: right;
