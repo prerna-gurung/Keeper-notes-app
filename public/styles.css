@@ -60,8 +60,7 @@ footer p {
 
 }
 
-.note textarea,
-.note input {
+.note textarea {
   outline: none;
   border: transparent;
   width: 100%;
@@ -69,21 +68,19 @@ footer p {
   overflow: hidden; 
   font-family: inherit; 
   height: auto;
+  font-size: 1.1em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
-.note input.title {
-  font-size: 1.5em;
-  font-weight: 500;
-  display: block;
+.note textarea.title {
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
 .note textarea.content {
-  font-size: 1.1em;
   margin-bottom: 4px;
   font-weight: 100; 
-  white-space: pre-wrap;
-  word-wrap: break-word;
   min-height: 50px; 
 }
 

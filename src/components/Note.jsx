@@ -42,7 +42,7 @@ function Note(props) {
 
   return (
     <div className="note">
-   <input type="text" name="title" value={newValue.title} onChange={handleEdit} onBlur={handleBlur} className="title"/>
+   <textarea type="text" name="title" value={newValue.title} onChange={handleEdit} onBlur={handleBlur} className="title"/>
    <textarea
         name="content"
         value={newValue.content}
