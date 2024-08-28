@@ -1,7 +1,6 @@
 {
   "homepage": "https://prerna-gurung.github.io/Keeper-notes-app",
   "name": "using-pre-built-react-components-completed",
-  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
